@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "67afe4cb-8eb4-4b51-8dd2-b9ca5c125f30",
+		"name": "API TAREFAS - Java Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19509228"
+	},
+	"item": [
+		{
+			"name": "todas tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost_spring}}/tarefas",
+					"host": [
+						"{{localhost_spring}}"
+					],
+					"path": [
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarefa especifica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost_spring}}/tarefas/1",
+					"host": [
+						"{{localhost_spring}}"
+					],
+					"path": [
+						"tarefas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criar tarefa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"preciso aprender JAVA Spring Boot\",\r\n    \"descricao\": \"para desenvolver APIs REST na equipe preciso aprender JAVA e Spring\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost_spring}}/tarefas",
+					"host": [
+						"{{localhost_spring}}"
+					],
+					"path": [
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alterar tarefa",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"titulo\": \"preciso aprender JAVA Spring Boot - ALTERADO\",\r\n    \"descricao\": \"para desenvolver APIs REST na equipe preciso aprender JAVA e Spring\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost_spring}}/tarefas/1",
+					"host": [
+						"{{localhost_spring}}"
+					],
+					"path": [
+						"tarefas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar tarefa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{localhost_spring}}/tarefas/1",
+					"host": [
+						"{{localhost_spring}}"
+					],
+					"path": [
+						"tarefas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
